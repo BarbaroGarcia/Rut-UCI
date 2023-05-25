@@ -1,8 +1,18 @@
 import BasicExample from "../Components/Sidebar"
 import Header from "./Header";
-
+import { useNavigate } from 'react-router-dom';
 
 function MostrarRutas() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate('/rutas/nueva');
+  }
+  const navigateedit = useNavigate();
+
+  function handleClickedit() {
+    navigateedit('/rutas/modificar');
+  }
   return (
     <>
     <Header/>
@@ -10,8 +20,8 @@ function MostrarRutas() {
       <div className="bg-white shadow-md rounded-md overflow-hidden mx-4 y mt-4 py-2 px-4">
         <div className="flex justify-between items-center px-4 py-2 ">
           <h2 className="text-lg font-bold text-gray-800">Rutas Establecidas</h2>
-          <button className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-            Nuevo Ruta
+          <button onClick={handleClick} className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+            Nueva Ruta
           </button>
         </div>
         <table className="w-full">
@@ -33,7 +43,7 @@ function MostrarRutas() {
               <td className="px-6 py-4 whitespace-nowrap">{/* Dato 6 */}</td>
               <td className="px-6 py-4 whitespace-nowrap">{/* Dato 6 */}</td>
               <td className="px-6 py-4 whitespace-nowrap">
-                <button className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                <button onClick={handleClickedit} className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
                   Editar
                 </button>
               </td>

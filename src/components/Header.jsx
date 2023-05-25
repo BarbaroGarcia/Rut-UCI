@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Logo from '../IMG/favicon.ico';
-import SideBar from './Sidebar';
+import Sidebar from "./Sidebar";
 
 const Header = () => {
 const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -23,8 +23,9 @@ d={isSidebarOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
 </button>
 <img src={Logo} alt="Logo" className="w-8 h-8 mx-auto" />
 <div className="text-gray-800 font-bold text...gray-800 font-bold text-xl">Rut-UCI</div>
-<SideBar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+<Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 </div>
+
 );
 };
 

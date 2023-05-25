@@ -1,25 +1,25 @@
 import Header from "./Header";
-import { useNavigate } from 'react-router-dom';
 import BasicExample from "../Components/Sidebar"
-function InsertarUsuario() {
-  const navigate = useNavigate();
+import { useNavigate } from 'react-router-dom';
+function ModificarUsuario() {
+    const navigate = useNavigate();
 
-  function handleGoBack() {
-    navigate(-1);
-  }
+    function handleGoBack() {
+      navigate(-1);
+    }
     return (
+       
       <>
       <Header/>
-
       <BasicExample/>
       <div className="flex items-center justify-center h-screen bg-gray-100">
         <div className="bg-white rounded-lg shadow-md w-full max-w-sm">
           <div className="p-6">
-          <div>
+            <div>
       <button className="" onClick={handleGoBack}>Volver</button></div>
             <form className="flex flex-col items-center ">
               <div className="block text-center text-2xl font-bold mb-4">
-                <h2>Insertar Usuario</h2>
+                <h2>Modificar Usuario</h2>
               </div>
               <div className="flex flex-col items-start my-4 max-w-350px">
                 <label className="text-start text-lg font-bold mb-2" htmlFor="Usuario">Nombre de usuario:</label>
@@ -35,7 +35,7 @@ function InsertarUsuario() {
               </div>
               <div className="flex flex-col items-center mx-2 ">
                 <button type="submit" className="bg-blue-700 rounded-md border-none w-3/2 text-white cursor-pointer text-md font-bold py-3 px-20 transition duration-300 hover:bg-blue-600 my-2">
-                  Insertar
+                  Modificar
                 </button>
                 <button type="submit" className="bg-red-600 rounded-md border-none w-3/2 text-white cursor-pointer text-md font-bold py-3 px-20 transition duration-300 hover:bg-red-500 my-2">
                   Cancelar
@@ -49,4 +49,4 @@ function InsertarUsuario() {
     );
   }
   
-  export default InsertarUsuario;
+  export default ModificarUsuario;
