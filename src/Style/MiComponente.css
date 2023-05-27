@@ -31,11 +31,11 @@
 }
 
 .mensaje-enmarcado {
-
   position: absolute;
   top: 70%;
+  border-style: inset;
   left: 300px;
-  right: 50px;;
+  right: 50px;
   width: 600px;
   transform: translateY(-50%);
   display: flex;
@@ -46,9 +46,13 @@
   text-align: center;
   color: #ffffff;
   border: 2px solid #ffffff;
-  border-radius: 4px;
+  border-radius: 15px;
   padding: 4px;
   background: none;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 .parrafo {
