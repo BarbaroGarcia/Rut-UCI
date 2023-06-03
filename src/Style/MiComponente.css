@@ -33,7 +33,6 @@
 .mensaje-enmarcado {
   position: absolute;
   top: 70%;
-  border-style: inset;
   left: 300px;
   right: 50px;
   width: 600px;
